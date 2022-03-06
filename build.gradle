@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'inc.mimik'
+version 'aW50ZWdyYXRpb24tdGVzdC1mdW5jdGlvbmFsLXN5c3RlbQ'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.mockito:mockito-core:2.24.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'com.opencsv:opencsv:5.6'
+}
+
+test {
+    useJUnitPlatform()
+}
