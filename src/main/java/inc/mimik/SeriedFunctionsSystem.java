@@ -1,27 +1,27 @@
 package inc.mimik;
 
-import inc.mimik.functions.CotangentSeries;
-import inc.mimik.functions.RandomBaseLogarithmSeries;
-import inc.mimik.functions.SecantSeries;
-import inc.mimik.functions.SineSeries;
-import inc.mimik.functions.base.CosineSeries;
-import inc.mimik.functions.base.NaturalLogarithmSeries;
+import inc.mimik.functions.SeriedCotangent;
+import inc.mimik.functions.SeriedRandomBaseLogarithm;
+import inc.mimik.functions.SeriedSecant;
+import inc.mimik.functions.SeriedSine;
+import inc.mimik.functions.base.SeriedCosine;
+import inc.mimik.functions.base.SeriedNaturalLogarithm;
 
 import java.util.function.Function;
 
-public class FunctionsSystem implements Function<Double, Double> {
-  private final CosineSeries cos;
-  private final SineSeries sin;
-  private final SecantSeries sec;
-  private final CotangentSeries cot;
+public strictfp class SeriedFunctionsSystem implements Function<Double, Double> {
+  private final SeriedCosine cos;
+  private final SeriedSine sin;
+  private final SeriedSecant sec;
+  private final SeriedCotangent cot;
 
-  private final NaturalLogarithmSeries ln;
-  private final RandomBaseLogarithmSeries log2;
-  private final RandomBaseLogarithmSeries log3;
-  private final RandomBaseLogarithmSeries log5;
-  private final RandomBaseLogarithmSeries log10;
+  private final SeriedNaturalLogarithm ln;
+  private final SeriedRandomBaseLogarithm log2;
+  private final SeriedRandomBaseLogarithm log3;
+  private final SeriedRandomBaseLogarithm log5;
+  private final SeriedRandomBaseLogarithm log10;
 
-  public FunctionsSystem( CosineSeries cos, SineSeries sin, SecantSeries sec, CotangentSeries cot, NaturalLogarithmSeries ln, RandomBaseLogarithmSeries log2, RandomBaseLogarithmSeries log3, RandomBaseLogarithmSeries log5, RandomBaseLogarithmSeries log10 ) {
+  public SeriedFunctionsSystem( SeriedCosine cos, SeriedSine sin, SeriedSecant sec, SeriedCotangent cot, SeriedNaturalLogarithm ln, SeriedRandomBaseLogarithm log2, SeriedRandomBaseLogarithm log3, SeriedRandomBaseLogarithm log5, SeriedRandomBaseLogarithm log10 ) {
 
     this.cos = cos;
     this.sin = sin;

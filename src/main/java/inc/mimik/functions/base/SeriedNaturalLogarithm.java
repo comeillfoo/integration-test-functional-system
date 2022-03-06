@@ -1,7 +1,7 @@
 package inc.mimik.functions.base;
 
-public class NaturalLogarithmSeries extends TaylorSeriesFunction {
-  public NaturalLogarithmSeries( long terms ) {
+public strictfp class SeriedNaturalLogarithm extends SeriedTaylorFunction {
+  public SeriedNaturalLogarithm( long terms ) {
     super( terms );
   }
 

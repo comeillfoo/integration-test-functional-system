@@ -2,8 +2,8 @@ package inc.mimik.functions.base;
 
 import inc.mimik.utils.AdditionalMathUtils;
 
-public class CosineSeries extends TaylorSeriesFunction {
-  public CosineSeries( long terms ) {
+public strictfp class SeriedCosine extends SeriedTaylorFunction {
+  public SeriedCosine( long terms ) {
     super( terms );
   }
 
