@@ -1,7 +1,7 @@
 package inc.mimik.functions;
 
-import inc.mimik.functions.base.SeriedNaturalLogarithm;
-import inc.mimik.functions.base.SeriedTaylorFunction;
+import inc.mimik.functions.basic.SeriedNaturalLogarithm;
+import inc.mimik.functions.basic.SeriedTaylorFunction;
 
 public strictfp class SeriedRandomBaseLogarithm extends SeriedTaylorFunction {
   private final SeriedNaturalLogarithm LN;

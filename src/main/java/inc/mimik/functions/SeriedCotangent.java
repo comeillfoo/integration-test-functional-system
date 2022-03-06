@@ -1,7 +1,7 @@
 package inc.mimik.functions;
 
-import inc.mimik.functions.base.SeriedCosine;
-import inc.mimik.functions.base.SeriedTaylorFunction;
+import inc.mimik.functions.basic.SeriedCosine;
+import inc.mimik.functions.basic.SeriedTaylorFunction;
 
 public strictfp class SeriedCotangent extends SeriedTaylorFunction {
   private final SeriedCosine COS;

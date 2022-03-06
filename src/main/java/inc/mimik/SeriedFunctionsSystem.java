@@ -4,8 +4,8 @@ import inc.mimik.functions.SeriedCotangent;
 import inc.mimik.functions.SeriedRandomBaseLogarithm;
 import inc.mimik.functions.SeriedSecant;
 import inc.mimik.functions.SeriedSine;
-import inc.mimik.functions.base.SeriedCosine;
-import inc.mimik.functions.base.SeriedNaturalLogarithm;
+import inc.mimik.functions.basic.SeriedCosine;
+import inc.mimik.functions.basic.SeriedNaturalLogarithm;
 
 import java.util.function.Function;
 
@@ -37,7 +37,7 @@ public strictfp class SeriedFunctionsSystem implements Function<Double, Double> 
 
   @Override
   public Double apply( Double x ) {
-    double result = 0;
+    double result;
     if ( x <= Double.MIN_VALUE ) {
       final double sec_x = sec.apply( x );
       final double sec_x_3 = sec_x * sec_x * sec_x;

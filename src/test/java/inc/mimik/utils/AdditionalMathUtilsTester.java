@@ -4,7 +4,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.*;
 
-public strictfp class AdditionalMathUtilsTest {
+public strictfp class AdditionalMathUtilsTester {
 
   @ParameterizedTest
   @CsvSource( value={

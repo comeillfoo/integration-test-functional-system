@@ -1,4 +1,4 @@
-package inc.mimik.functions.base;
+package inc.mimik.functions.basic;
 
 public strictfp class SeriedNaturalLogarithm extends SeriedTaylorFunction {
   public SeriedNaturalLogarithm( long terms ) {

@@ -1,4 +1,4 @@
-package inc.mimik.functions.base;
+package inc.mimik.functions.basic;
 
 import java.util.function.Function;
 
