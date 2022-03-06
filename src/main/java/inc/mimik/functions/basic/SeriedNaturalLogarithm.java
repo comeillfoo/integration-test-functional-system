@@ -1,15 +1,19 @@
 package inc.mimik.functions.basic;
 
 public strictfp class SeriedNaturalLogarithm extends SeriedTaylorFunction {
-  public SeriedNaturalLogarithm( long terms ) {
+  public SeriedNaturalLogarithm( long terms, double a ) {
     super( terms );
+    this.a = a;
   }
+
+  private final double a;
 
   @Override
   public Double apply( Double x ) {
-    double result = 0;
-    for ( long n = 1; n < TERMS; ++n )
-      result += Math.pow( -1.0, n - 1 ) * Math.pow( x - 1, n ) / n;
-    return result;
+    double fx = Math.log( a );
+    for ( long n = 1; n < TERMS + 1; ++n ) {
+      fx += Math.pow( -1, n - 1 ) * Math.pow( x - a, n ) / ( n * Math.pow( a, n ) );
+    }
+    return fx;
   }
 }
