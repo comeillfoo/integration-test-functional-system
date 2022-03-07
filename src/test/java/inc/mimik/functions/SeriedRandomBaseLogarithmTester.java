@@ -41,29 +41,61 @@ public strictfp class SeriedRandomBaseLogarithmTester {
 
   @ParameterizedTest
   @CsvFileSource( files={ "log2_table.csv" } )
-  public void testLog2UsingCSVFile( double x, double expectedY ) {
+  public void testLog2OnLnStubUsingCSVFile( double x, double expectedY ) {
     final double log2Delta = 0.0;
     assertEquals( expectedY, log2.apply( x ), log2Delta );
   }
 
   @ParameterizedTest
   @CsvFileSource( files={ "log3_table.csv" } )
-  public void testLog3UsingCSVFile( double x, double expectedY ) {
+  public void testLog3OnLnStubUsingCSVFile( double x, double expectedY ) {
     final double log3Delta = 0.0;
     assertEquals( expectedY, log3.apply( x ), log3Delta );
   }
 
   @ParameterizedTest
   @CsvFileSource( files={ "log5_table.csv" } )
-  public void testLog5UsingCSVFile( double x, double expectedY ) {
+  public void testLog5OnLnStubUsingCSVFile( double x, double expectedY ) {
     final double log5Delta = 0.0;
     assertEquals( expectedY, log5.apply( x ), log5Delta );
   }
 
   @ParameterizedTest
   @CsvFileSource( files={ "log10_table.csv" } )
-  public void testLog10UsingCSVFile( double x, double expectedY ) {
+  public void testLog10OnLnStubUsingCSVFile( double x, double expectedY ) {
     final double log10Delta = 0.0;
     assertEquals( expectedY, log10.apply( x ), log10Delta );
+  }
+
+  @ParameterizedTest
+  @CsvFileSource( files={ "log2_table.csv" } )
+  public void testLog2OnRealLnUsingCSVFile( double x, double expectedY ) {
+    final double log2Delta = 0.554963739231812;
+    final SeriedNaturalLogarithm realLn = new SeriedNaturalLogarithm( 256, 6.0 );
+    assertEquals( expectedY, new SeriedRandomBaseLogarithm( realLn, 2.0 ).apply( x ), log2Delta );
+  }
+
+  @ParameterizedTest
+  @CsvFileSource( files={ "log3_table.csv" } )
+  public void testLog3OnRealLnUsingCSVFile( double x, double expectedY ) {
+    final double log3Delta = 0.35014999603766;
+    final SeriedNaturalLogarithm realLn = new SeriedNaturalLogarithm( 256, 6.0 );
+    assertEquals( expectedY, new SeriedRandomBaseLogarithm( realLn, 3.0 ).apply( x ), log3Delta );
+  }
+
+  @ParameterizedTest
+  @CsvFileSource( files={ "log5_table.csv" } )
+  public void testLog5OnRealLnUsingCSVFile( double x, double expectedY ) {
+    final double log5Delta = 0.239005871169066;
+    final SeriedNaturalLogarithm realLn = new SeriedNaturalLogarithm( 256, 6.0 );
+    assertEquals( expectedY, new SeriedRandomBaseLogarithm( realLn, 5.0 ).apply( x ), log5Delta );
+  }
+
+  @ParameterizedTest
+  @CsvFileSource( files={ "log10_table.csv" } )
+  public void testLog10OnRealLnUsingCSVFile( double x, double expectedY ) {
+    final double log10Delta = 0.1670564370340710;
+    final SeriedNaturalLogarithm realLn = new SeriedNaturalLogarithm( 256, 6.0 );
+    assertEquals( expectedY, new SeriedRandomBaseLogarithm( realLn, 10.0 ).apply( x ), log10Delta );
   }
 }
