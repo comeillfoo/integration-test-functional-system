@@ -38,7 +38,7 @@ public strictfp class SeriedFunctionsSystem implements Function<Double, Double> 
   @Override
   public Double apply( Double x ) {
     double result;
-    if ( x <= Double.MIN_VALUE ) {
+    if ( x <= 0.000 ) {
       final double sec_x = sec.apply( x );
       final double sec_x_3 = sec_x * sec_x * sec_x;
       final double sin_x = sin.apply( x );
